@@ -1,27 +1,27 @@
-import React from "react"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome } from '@fortawesome/free-solid-svg-icons'
-import { faBell } from '@fortawesome/free-solid-svg-icons'
-import { faUsers } from '@fortawesome/free-solid-svg-icons'
-import { faLocationArrow } from '@fortawesome/free-solid-svg-icons'
-
-
-
-
-function Navbar () {
-  return (
-    <div id="nav">
-      <h1>Twitty Tweeter</h1>
-      <span id="icons">
-        <img src="https://image.flaticon.com/icons/png/512/23/23681.png" alt="twitter logo" style = {{height: "40px", width: "40px"}}></img>
-        <FontAwesomeIcon className = "icon" icon = {faHome} style = {{height: "40px", width: "40px"}}/>
-        <FontAwesomeIcon className = "icon" icon = {faBell} style = {{height: "40px", width: "40px"}}/>
-        <FontAwesomeIcon className = "icon" icon = {faUsers} style = {{height: "40px", width: "40px"}}/>
-        <FontAwesomeIcon className = "icon" icon = {faLocationArrow} style = {{height: "40px", width: "40px"}}/>
-      </span>  
-      
-    </div>
-  )
+import React from "react";
+import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { faListAlt } from "@fortawesome/free-regular-svg-icons";
+import { faUser } from "@fortawesome/free-regular-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
+class Navbar extends React.Component {
+  render() {
+    const home = <FontAwesomeIcon icon={faHome} color="white" />;
+    const feed = <FontAwesomeIcon icon={faListAlt} color="white" />;
+    const myPage = <FontAwesomeIcon icon={faUser} color="white" />;
+    return (
+      <nav id="navbar">
+        <Link to="/" style={{ padding: "10px" }}>
+          {home}
+        </Link>
+        <Link to="/Tweets" style={{ padding: "10px" }}>
+          {feed}
+        </Link>
+        <Link to="/MyPage" style={{ padding: "10px" }}>
+          {myPage}
+        </Link>
+      </nav>
+    );
+  }
 }
-
-export default Navbar
+export default Navbar;

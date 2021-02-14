@@ -1,172 +1,120 @@
-import React from 'react'
-import './App.css';
-import Navbar from "./components/Navbar"
-import Footer from "./components/Footer"
-import Tweet from "./components/Tweet"
-
-let data = [{
-  "id": 0,
-  "title": "@Ryan Reeves",
-  "description": "I am Aquaman",
-  "date": "August 24, 2020",
-  "author" : "Jason Momoa"
-},
-{
-  "id": 1,
-  "title": "@Vladamir Tarasenko",
-  "description": "I am Iron Man",
-  "date": "September 11, 2020",
-  "author" : "Tony Stark"
-},
-{
-  "id": 2,
-  "title": "@Ryan O'Reilly",
-  "description": "Reach for the Sky!",
-  "date": "September 23, 2020",
-  "author" : "Woody"
-},
-{
-  "id": 3,
-  "title": "@Anonymous",
-  "description": "To Infinity...and Beyond!",
-  "date": "December 1st, 2020",
-  "author" : "Buzz Lightyear"
-}]
+import "./Styles.css";
+import React from "react";
+import Home from "./components/Home";
+import Navbar from "./components/Navbar";
+import Tweets from "./components/Tweets";
+import MyPage from "./components/MyPage";
+import { SocialIcon } from "react-social-icons";
+import { Switch, Route } from "react-router-dom";
+import data from "./Data.json";
 
 class App extends React.Component {
-  constructor(){
-    super()
+  constructor() {
+    super();
     this.state = {
-      "newTweet":"",
-      "date":"",
-      "author":"",
-      "target":"" 
-    }
-    this.handleClick = this.handleClick.bind(this)
-    this.handleChange = this.handleChange.bind(this)
-    this.displayTweets = this.displayTweets.bind(this)
-    this.addTweet = this.addTweet.bind(this)
-    this.updateTweet = this.updateTweet.bind(this)
-   
+      data: data,
+      // loggedIn: false,
+    };
   }
+  //  logIn = () => {
+  //   let log = document.getElementById("email")
+  //   if( log.value === ""){
+  //     this.setState({
+  //       loggedIn: true
+  //   })
+  // }}
+  addOne = (tweet) => {
+    let newData = this.state.data;
+    newData = {
+      data: [
+        { myTweets: [...this.state.data.data[0].myTweets, tweet] },
+        this.state.data.data[1],
+      ],
+    };
+    this.setState((prevState) => ({
+      data: newData,
+    }));
+  };
   
-  displayTweets = (arr) => {
-    return arr.map((x) =>{
-      return (
-        <Tweet 
-          id={x.id} 
-          title={x.title} 
-          author={x.author} 
-          date={x.date} 
-          description={x.description}  
-          update = {this.updateTweet}/>
-      )})
-  }
-
-  addTweet = (e) => {
-    e.preventDefault()
-    let x = {
-      "id": Math.floor(Math.random() * 100),
-      "title": this.state.target,
-      "author": this.state.author,
-      "date": this.state.date,
-      "description": this.state.newTweet      
-    }
-    data.push(x)
-    console.log(data)
-    this.setState ({
-      "newTweet": "",
-      "date": "",
-      "author":"",
-      "target":"",
-      "id": ""
-    })
-  }
-
-  handleClick (e) {
-    e.preventDefault()
-  }
-
-  handleChange(event){
-    const {name, value} = event.target
-    this.setState({
-      [name]: value
-    })
-  }
-
-  updateTweet (id, updatedTweet) {
-    const updatedTweets = data.map(tweet => {
-      if(tweet.id === id){
-        data[id].description = updatedTweet        
-      } return tweet      
-    })
-    data = updatedTweets
-    this.setState ({
-      "newTweet": "",
-      "date": "",
-      "author":"",
-      "target":""
-    })
-    console.log(data)
-  }
-
-  render (){
-    
-      
-      
-    
+  editOne = (update) => {
+    console.log(update);
+    let newData = this.state.data;
+    let updateTweets = this.state.data.data[0].myTweets;
+    let updated = updateTweets.map(function (tweet) {
+      console.log(tweet)
+      if(update.id === tweet.id){
+        return update
+      }
+      else return tweet
+    });
+    console.log(updated);
+    newData = {
+      data: [{ myTweets: updated }, this.state.data.data[1]],
+    };
+    console.log(newData);
+    this.setState((prevState) => ({
+      data: newData,
+    }));
+  };
+  
+  
+  deleteOne = (id) => {
+    console.log(id);
+    let newData = this.state.data;
+    let updateTweets = this.state.data.data[0].myTweets;
+    let updated = updateTweets.filter(function (tweet) {
+      return tweet.id !== id;
+    });
+    console.log(updated);
+    newData = {
+      data: [{ myTweets: updated }, this.state.data.data[1]],
+    };
+    console.log(newData);
+    this.setState((prevState) => ({
+      data: newData,
+    }));
+  };
+  render() {
+    let style = {
+      height: 35,
+      width: 35,
+      boxShadow: "grey 2px 2px 2px",
+      borderRadius: "50%",
+      border: "1px outset rgba(55, 168, 243, 0.835)",
+    };
     return (
-      <div className="App">
+      <div id="mainDiv">
+        <header>
+          Twitter
+          <SocialIcon network="twitter" style={style} fgColor="white" />
+          <hr />
+        </header>
         <Navbar />
-        <form onSubmit={this.addTweet}>
-          <label>New Tweet</label>
-            <div>
-              <input 
-                type='text' 
-                placeholder='@'
-                onChange = {this.handleChange}
-                name = "target">
-              </input>
-            </div>
-            <div>
-              <textarea 
-                type='textarea' 
-                placeholder='New Tweet'
-                onChange = {this.handleChange}
-                name = "newTweet">
-              </textarea>
-            </div>
-            <div>
-              <input
-                type='date'
-                placeholder='Date'
-                onChange = {this.handleChange}
-                name = "date">
-              </input>  
-            </div>
-            <div> 
-              <input
-                type='text'
-                placeholder='Author'
-                onChange = {this.handleChange}
-                name = "author">
-              </input>
-            </div>
-            <div>
-              <button>Submit</button>   
-            </div>
-                
-        </form>
-        <div id="tweets">
-          <h1>Welcome to Twitty Tweeter</h1>
-          <h3>Where friends come together and tweet the twitty!</h3>
-          {this.displayTweets(data)}
-          
-        </div>
-        <Footer id="footer"/>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/Tweets">
+            <Tweets data={this.state.data.data} />
+          </Route>
+          <Route exact path="/MyPage">
+            <MyPage
+              data={this.state.data.data}
+              addOne={this.addOne}
+              deleteOne={this.deleteOne}
+              editOne={this.editOne}
+            />
+          </Route>
+        </Switch>
+        <footer>
+          <div>
+            <hr />
+            <p>Web Dev Student 2021</p>
+          </div>
+        </footer>
       </div>
-    )
-  } 
+    );
+  }
 }
 
 export default App;
