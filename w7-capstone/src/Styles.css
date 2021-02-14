@@ -1,11 +1,4 @@
 @media only screen and (min-width: 1000px) {
-  body {
-      background-image: url("https://images.unsplash.com/photo-1551817958-d9d86fb29431?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTF8fHR3aXR0ZXJ8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: cover;
-  }
   header {
       position: initial;
       font-size: 48px;
