@@ -1,0 +1,73 @@
+body {
+  text-align: center;
+  background-color:black;
+  color: white;
+  background-size: cover;
+  width: 75%;
+  margin: auto;
+}
+
+#head {
+  font-size: 50px;
+  color: skyblue
+}
+
+#calcContainer {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#num1Block {
+  grid-column: 1/4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: blue;
+  font-weight: 800;
+  text-shadow: 1px 1px white;
+}
+
+#num2Block {
+  grid-column: 7/10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: blue;
+  font-weight: 800;
+  text-shadow: 1px 1px white;
+}
+
+#equal {
+  grid-column: 10/13;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#equal > button {
+  font-size: 25px;
+  height: 50px;
+  width: 50px;
+}
+
+input {
+  height: 50px;
+}
+
+select {
+  height: 50px;
+  width: 50px;
+  font-size: 25px;
+}
+
+#btnBlock {
+  grid-column: 4/7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: skyblue
+}

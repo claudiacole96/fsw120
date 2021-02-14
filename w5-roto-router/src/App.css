@@ -1,0 +1,59 @@
+body {
+  background-color: grey;
+  text-align: center;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: grey;
+}
+
+#links {
+  display: flex;
+  justify-content: space-around;
+  background-color: red;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  margin: 10px;
+}
+
+h1 {
+  color: red;
+  font-size: 50px;
+  font-weight: 800;
+}
+
+h3 {
+  color: darkblue;
+  font-size: 25px;
+}
+
+p {
+  line-height: 30px;
+  margin: 75px;
+  color: lightblue;
+  font-weight: 800;
+  font-size: 30px;
+}
+
+#footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  position: fixed;
+  bottom: 0;  
+  width: 100%;
+}
+
+#footerText {
+  grid-column: 2/3;
+}
+
+span {
+  color: darkblue;
+}
