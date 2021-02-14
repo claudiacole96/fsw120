@@ -76,8 +76,9 @@ class App extends React.Component {
   };
   render() {
     let style = {
-      height: 35,
-      width: 35,
+      height: 80,
+      width: 80,
+      marginTop: 0,
       boxShadow: "grey 2px 2px 2px",
       borderRadius: "50%",
       border: "1px outset rgba(55, 168, 243, 0.835)",
@@ -85,9 +86,8 @@ class App extends React.Component {
     return (
       <div id="mainDiv">
         <header>
-          Twitter
+          <h1>Twitter</h1>
           <SocialIcon network="twitter" style={style} fgColor="white" />
-          <hr />
         </header>
         <Navbar />
         <Switch>

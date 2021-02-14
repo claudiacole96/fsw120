@@ -9,18 +9,22 @@ class Home extends React.Component {
   render() {
     return (
       <div id="formGrid">
-        <form id="loginForm">
-          <input type="email" id="email" placeholder="Email" required></input>
-          <input
-            type="text"
-            id="password"
-            placeholder="Password"
-            required
-          ></input>
-          <button id="logIn" onClick={this.props.logIn}>
-            Log In
-          </button>
-        </form>
+        <img id="twitterHome" src="https://media.sproutsocial.com/uploads/2015/11/search-twitter-history.svg"></img>
+        <div id="formBox">
+            <form id="loginForm">
+                <input type="email" id="email" placeholder="Email" required></input>
+                <input
+                    type="text"
+                    id="password"
+                    placeholder="Password"
+                    required
+                ></input>
+                <button id="logIn" onClick={this.props.logIn}>
+                    Log In
+                </button>
+            </form> 
+        </div>
+        
       </div>
     );
   }

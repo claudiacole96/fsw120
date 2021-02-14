@@ -108,19 +108,19 @@ class MyPage extends React.Component {
             :(
               <>
                 <img src={props.url} alt="IMG N/A" id="returnImg"></img>
-                <p id="returnH3">{props.title}</p>
+                <h2 id="author">{props.author}</h2>
+                <span id="date">{props.date}</span>
                 <h5 id="returnH5">{props.description}</h5>
-                <h6 id="returnH6">{`Author:${props.author} Date:${props.date}`}</h6>
               </>
             )}
           <button 
             id="editButton" 
-            onClick={(e) => this.editing(props.id)}
+            onClick={() => this.editing(props.id)}
             >{editIcon}
           </button>
           <button
             id="deleteButton"
-            onClick={(e) => {
+            onClick={() => {
               console.log(this);
               this.props.deleteOne(props.id);
             }}
@@ -131,9 +131,11 @@ class MyPage extends React.Component {
       );
     });
     return (
-      <div>
-        <div id="formGrid">
+      <div id="myPageDiv">
+        <div id="formGridMyPage">
           <form id="postForm">
+            <img id="profilePic" src="https://i.imgur.com/mLEXUem.jpg"></img>
+            <h2>@Claudia</h2>
             <input
               type="text"
               id="title"

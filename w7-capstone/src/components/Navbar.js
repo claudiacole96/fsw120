@@ -11,13 +11,13 @@ class Navbar extends React.Component {
     const myPage = <FontAwesomeIcon icon={faUser} color="white" />;
     return (
       <nav id="navbar">
-        <Link to="/" style={{ padding: "10px" }}>
+        <Link to="/" style={{ padding: "25px", fontSize: "40px" }}>
           {home}
         </Link>
-        <Link to="/Tweets" style={{ padding: "10px" }}>
+        <Link to="/Tweets" style={{ padding: "25px", fontSize: "40px" }}>
           {feed}
         </Link>
-        <Link to="/MyPage" style={{ padding: "10px" }}>
+        <Link to="/MyPage" style={{ padding: "25px", fontSize: "40px" }}>
           {myPage}
         </Link>
       </nav>

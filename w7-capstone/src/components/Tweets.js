@@ -6,7 +6,7 @@ class Tweets extends React.Component {
       return (
         <div key={x.id} id="returnDiv">
           <img src={x.url} alt="IMG N/A" id="returnImg"></img>
-          <span id="author">{x.author}</span>
+          <h2 id="author">{x.author}</h2>
           <span id="date">{x.date}</span>
           <h5 id="returnH5">{x.description}</h5>
         </div>
@@ -17,7 +17,7 @@ class Tweets extends React.Component {
       return (
         <div key={x.id} id="returnDiv">
           <img src={x.url} alt="IMG N/A" id="returnImg"></img>
-          <span id="author">{x.author}</span>
+          <h2 id="author">{x.author}</h2>
           <span id="date">{x.date}</span>
           <h5 id="returnH5">{x.description}</h5>
         </div>
