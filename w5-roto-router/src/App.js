@@ -1,17 +1,36 @@
-import Footer from "./components/Footer"
-import Navbar from "./components/Navbar"
-import Home from "./components/Home"
-import About from "./components/About"
-import Services from "./components/Services"
-import './App.css';
-
+import React from "react";
+import { Switch, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import About from "./components/About";
+import Services from "./components/Services";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 function App() {
+  let styles = { textAlign:"center", }
   return (
-    <div className="App">
-      <Navbar />
+    <div style={styles}>
+    <h1>Roto-Router Website Template</h1>
+      <Navbar /> 
+      
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route exact path="/About">
+          <About />
+        </Route>
+        <Route exact path="/Contact">
+          <Contact />
+        </Route>
+        <Route exact path="/Services">
+          <Services />
+        </Route>
+      </Switch>
+      
       <Footer />
+
     </div>
   );
 }
-
 export default App;

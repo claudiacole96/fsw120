@@ -1,38 +1,73 @@
+*{
+  margin: 0;
+}
+
+body {
+  background-color: black;
+}
+
 .App {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr)
+}
+
+#nav {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  text-align: center;
+  background-color:red;
+  margin: 0;
+}
+
+#nav > h1 {
+  float: left;
+  margin: 20px;
+  background-color: red;
+}
+
+#nav > #icons {
+  float: right;
+  margin: 20px;
+  background-color: red;
+}
+
+#tweet {
+  color: white;
+  background-color: red;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+#tweet > button {
+  border-radius: 20px;
+  font-size: 20px;
+}
+
+#tweets {
+  grid-column: 2/5;
+  grid-row: 2/3;
+}
+
+#tweets > h1, h3{
+  color: white;
+  margin: 10px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#footer {
+  grid-column: 1/-1;
+  grid-row: 3/4;
+  background-color: black;
+  color: red;
+  font-weight: 800px;
+  text-align: center;
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+form {
+  margin: 20px;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

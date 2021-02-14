@@ -1,11 +1,13 @@
-import React from "react"
+import React from 'react';
 
-function Footer () {
-  return (
-    <div id="footer">
-      <h4 id="footerText">WebDev Student 2021</h4>
-    </div>
-  )
+function Footer(){
+    let styles = {
+        textAlign: "center",
+    }
+    return(
+        <div style={styles}>
+            <footer>Web Dev Student 2021</footer>
+        </div>
+    )
 }
-
-export default Footer
+export default Footer;
