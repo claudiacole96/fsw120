@@ -31,8 +31,6 @@ class Tweets extends React.Component {
         .split("/");
       let dateA = stringA[2] + stringA[0] + stringA[1];
       let dateB = stringB[2] + stringB[0] + stringB[1];
-      console.log(stringA)
-      console.log(stringB)
       return dateB - dateA;
     });
     return <div id="myPageTweets">{sortedTweetsArray}</div>;

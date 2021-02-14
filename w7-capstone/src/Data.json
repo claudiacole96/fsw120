@@ -3,42 +3,42 @@
             "myTweets": [{
                     "id": 0,
                     "title": "Post",
-                    "description": "@daveyjones Haven't heard from you in awhile cousin, I hope you're doing alright!",
+                    "description": "@Mandy The jump park was an absolute blast! We gotta go again!",
                     "date": "01/17/2021",
                     "author": "@Claudia",
-                    "url": "./"
+                    "url": "https://i.imgur.com/mLEXUem.jpg"
                 },
                 {
                     "id": 1,
                     "title": "Post",
-                    "description": "Just a shout out to my fiance! @smwinchester, I Love you! Thank you for Everything you do for me and our girls, idk where we'd be without you.",
+                    "description": "Just another project down! Graduation is on the way.",
                     "date": "02/02/2021",
                     "author": "@Claudia",
-                    "url": ""
+                    "url": "https://i.imgur.com/mLEXUem.jpg"
                 },
                 {
                     "id": 2,
                     "title": "Post",
-                    "description": "It feels like only yesterday that I held you in my arms for the first time. Your beautiful face filled everyone's hearts with so much love. Now you are a month shy of being my 5-year-old kindergartener. To my strong-willed, intelligent, loving, hilarious, positive thinking sweetie... Daddy loves you forever <3 ",
+                    "description": "Another weekend gone, I am not ready to wake up at 6am tomorrow.",
                     "date": "02/03/2021",
                     "author": "@Claudia",
-                    "url": ""
+                    "url": "https://i.imgur.com/mLEXUem.jpg"
                 },
                 {
                     "id": 3,
                     "title": "Post",
-                    "description": "Eminem's The Slim Shady LP is the dopest of all time. Repeat all day son",
-                    "date": "09/03/2010",
+                    "description": "@Tyler let's have another date night!",
+                    "date": "01/14/2019",
                     "author": "@Claudia",
-                    "url": ""
+                    "url": "https://i.imgur.com/mLEXUem.jpg"
                 },
                 {
                     "id": 4,
                     "title": "Post",
-                    "description": "Keep your focus on the present, your worries in the past, and your dreams towards the future.",
+                    "description": "So excited to start applying for internships soon. My career is only a few months away!",
                     "date": "07/28/2020",
                     "author": "@Claudia",
-                    "url": ""
+                    "url": "https://i.imgur.com/mLEXUem.jpg"
                 }
             ]
         },
@@ -46,82 +46,82 @@
             "friendsTweets": [{
                     "id": 5,
                     "title": "Post",
-                    "description": "Im new to twitter, Hi everyone!",
+                    "description": "@Claudia Let's go!",
                     "date": "01/15/2019",
                     "author": "@Tyler",
-                    "url": ""
+                    "url": "https://i.imgur.com/9vuR8nu.jpg"
                 },
                 {
                     "id": 6,
                     "title": "Post",
-                    "description": "Ill be your first friend! LOL, nice to meet you!",
+                    "description": "Can't believe I got a pentakill! Watch me tomorrow on stream.",
                     "date": "01/16/2019",
                     "author": "@Tyler",
-                    "url": ""
+                    "url": "https://i.imgur.com/9vuR8nu.jpg"
                 },
                 {
                     "id": 7,
                     "title": "Post",
-                    "description": "This shit is scary!!",
+                    "description": "Jump park for days! Can't wait to go again",
                     "date": "08/10/2020",
                     "author": "@Mandy",
-                    "url": ""
+                    "url": "https://i.imgur.com/VMX7Tls.jpg"
                 },
                 {
                     "id": 8,
                     "title": "Post",
-                    "description": "What really happened at the white house?",
+                    "description": "Gonna chill and watch Grey's anatomy tonight",
                     "date": "01/20/2021",
                     "author": "@Mandy",
-                    "url": ""
+                    "url": "https://i.imgur.com/VMX7Tls.jpg"
                 },
                 {
                     "id": 9,
                     "title": "Post",
-                    "description": "Well at least thats one way to put it.",
+                    "description": "I'm new here! How's everyone.",
                     "date": "12/21/2020",
                     "author": "@Emily",
-                    "url": ""
+                    "url": "https://i.imgur.com/so0kBqE.jpg"
                 },
                 {
                     "id": 10,
                     "title": "Post",
-                    "description": "Well at least thats one way to put it.",
+                    "description": "@Claudia When you coming home???",
                     "date": "12/21/2020",
                     "author": "@Emily",
-                    "url": ""
+                    "url": "https://i.imgur.com/so0kBqE.jpg"
                 },
                 {
                     "id": 11,
                     "title": "Post",
-                    "description": "Well at least thats one way to put it.",
+                    "description": "Football practice went pretty good today! Cheerleaders did great!",
                     "date": "12/21/2020",
                     "author": "@Amber",
-                    "url": ""
+                    "url": "https://i.imgur.com/6gZRuq0.jpg"
                 },
                 {
                     "id": 12,
                     "title": "Post",
-                    "description": "Well at least thats one way to put it.",
+                    "description": "Don't forget! Party at my house for new years!",
                     "date": "12/21/2020",
                     "author": "@Amber",
-                    "url": ""
+                    "url": "https://i.imgur.com/6gZRuq0.jpg"
                 },
                 {
                     "id": 13,
                     "title": "Post",
-                    "description": "Well at least thats one way to put it.",
+                    "description": "When are you gonna fly out @Claudia! We miss you!",
                     "date": "12/21/2020",
                     "author": "@Chelsea",
-                    "url": ""
+                    "url": "https://i.imgur.com/IDUqsKD.jpg"
                 },
                 {
                     "id": 14,
                     "title": "Post",
-                    "description": "Well at least thats one way to put it.",
+                    "description": "Another long week down, now for a glass of wine.",
                     "date": "12/21/2020",
                     "author": "@Chelsea",
-                    "url": ""
+                    "url": "https://i.imgur.com/IDUqsKD.jpg"
                 }
             ]
         }
