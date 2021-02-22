@@ -3,17 +3,22 @@ import React from "react"
 function App() {
     return (
         <div>
-            <input type="checkbox" />
-            <p>Placeholder text here</p>
-
-            <input type="checkbox" />
-            <p>Placeholder text here</p>
-
-            <input type="checkbox" />
-            <p>Placeholder text here</p>
-
-            <input type="checkbox" />
-            <p>Placeholder text here</p>
+            <div>
+                <input type="checkbox" />
+                <span>Eggs</span>
+            </div>
+            <div>
+                <input type="checkbox" />
+                <span>Milk</span>
+            </div>   
+            <div>
+                <input type="checkbox" />
+                <span>Bacon</span>
+            </div>
+            <div>
+                <input type="checkbox" />
+                <span>Cereal</span>
+            </div>  
         </div>
     )
 }
