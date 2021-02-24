@@ -1,7 +1,8 @@
 import React from "react"
 
+import "./App.css"
 import vacationSpots from "./components/vacationData"
-import Spot from "./Spot"
+import Spot from "./components/Spot"
 
 function App() {
   const vacationComponents = vacationSpots.map(

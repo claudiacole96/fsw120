@@ -15,6 +15,15 @@ function seasonStyle(x) {
     y.marginBottom = "10px"
     return (y)
 }
+function dollarPrice(x) {
+    if (x.price < 500) {
+        return "$"
+    } else if (x.price < 1000) {
+        return "$$"
+    } else {
+        return "$$$"
+    }
+}
 
 function Spot(props) {
     return (
@@ -22,6 +31,7 @@ function Spot(props) {
             <h1 style={{fontWeight: "bold", display: "inline-block", paddingLeft: "15px"}}>{props.place}</h1>
             <h2 style={{display: "inline-block", float: "right", paddingRight: "15px"}}>Price: ${props.price}</h2>
             <span style={{padding: "15px", fontSize: "25px"}}>(When to go? {props.timeToGo})</span>
+            <span style={{fontWeight: "bold", padding: "15px", fontSize: "25px"}}>{dollarPrice(props)}</span>
             <a href="https://www.google.com" style={{display: "block", padding: "15px", fontSize: "20px", color: "purple"}}>Book Now!</a>
         </div>
     )
