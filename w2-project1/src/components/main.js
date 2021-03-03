@@ -1,7 +1,7 @@
 import React from "react"
 
 import Post from "./posts"
-import blogPosts from "./components/blogPosts"
+import blogPosts from "./blogPosts"
 
 function Main() {
   const blogPostComponents = blogPosts.map(
