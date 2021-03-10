@@ -1,12 +1,38 @@
 import React from "react"
-/* export let box = document.getElementById("box") */
 
-function Die(props) {
-  return (
-    <div style={{display: "flex", justifyContent: "center", alignItems: "center", height: "100px", width: "100px", border: "5px solid black"}}>
-      <h1>{props.num}</h1>
-    </div>
-  )
+class Die extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state ={
+            isSelected: false
+        }
+        this.handleClick = this.handleClick.bind(this)
+    }
+
+    handleClick(e) {
+        this.setState(prevState => {
+            if (prevState.isSelected) {
+                e.target.classList.remove("selected")
+                return {
+                    isSelected: false
+                }
+            } else {
+                e.target.classList.add("selected")
+                return {
+                    isSelected: true
+                }
+            }
+        })
+    }
+    
+    render() {
+       return (
+            <div className="die" onClick={this.handleClick}>
+                <span>{this.props.int}</span>
+            </div>
+        ) 
+    }
+    
 }
 
-export default Die;
+export default Die
